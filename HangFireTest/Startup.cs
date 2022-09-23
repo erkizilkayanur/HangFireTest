@@ -25,7 +25,7 @@ namespace HangFireTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-            services.AddHangfire(x => x.UseSqlServerStorage(@"Data Source=nctestdb01.e-cozum.com;Initial Catalog=pos_dev;Integrated Security=False;Persist Security Info=False;User ID=pos_dev;Password=Zsdxc!34=3;MultipleActiveResultSets=True;"));
+            services.AddHangfire(x => x.UseSqlServerStorage(@"Data Source=(localdb)\\Local; Initial Catalog=HangFireTest; Integrated Security=True; MultipleActiveResultSets=True;"));
 
             services.AddHangfireServer();
             services.AddMvc(options => options.EnableEndpointRouting = false);
